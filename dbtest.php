@@ -1,9 +1,9 @@
 <?php
-$dbhost = getenv("MYSQL_SERVICE_HOST");
-$dbport = getenv("MYSQL_SERVICE_PORT");
-$dbuser = getenv("databaseuser");
-$dbpwd = getenv("databasepassword");
-$dbname = getenv("databasename");
+$dbhost = getenv("OPENSHIFT_MYSQL_DB_HOST");
+$dbport = getenv("OPENSHIFT_MYSQL_DB_PORT");
+$dbuser = getenv("OPENSHIFT_MYSQL_DB_USERNAME");
+$dbpwd = getenv("OPENSHIFT_MYSQL_DB_PASSWORD");
+$dbname = getenv("genmeddb");
 
 $connection = new mysqli($dbhost, $dbuser, $dbpwd, $dbname);
 if ($connection->connect_errno) {
